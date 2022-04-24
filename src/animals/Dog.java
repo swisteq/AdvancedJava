@@ -1,6 +1,6 @@
 package animals;
 
-public class Dog extends Animal{
+public class Dog extends Animal implements FastRunner {
 
     public Dog(String name) {
         super(name);
@@ -8,7 +8,16 @@ public class Dog extends Animal{
 
     @Override
     public void saySomething() {
-        System.out.println(name + " woof woof");
+        System.out.println(name + " hau hau");
     }
 
+    @Override
+    public void run() {
+        System.out.println("Hop hop");
+    }
+
+    @Override
+    public void runFaster() {
+        System.out.println("Hop hop Hop hop Hop hop");
+    }
 }
